@@ -5,14 +5,14 @@ export function Hero() {
     <section className="flex flex-col items-center w-full bg-black text-white">
       <div className="max-w-7xl mx-auto px-4 w-full py-20">
         <div className="flex flex-col items-center text-center">
-          <span className="text-[#FFD700] mb-6">TRUSTED DESIGN AND DEVELOPMENT AGENCY</span>
+          <span className="text-[#FFE45B] mb-6">TRUSTED DESIGN AND DEVELOPMENT AGENCY</span>
           
           <h1 className="text-5xl font-bold mb-6 max-w-3xl">
             Creating websites that look{' '}
-            <span className="text-[#FFD700]">great</span>
+            <span className="bg-gradient-to-r from-[#EC512B] to-[#F5BF49] inline-block text-transparent bg-clip-text">great</span>
             <br />
             and perform{' '}
-            <span className="text-[#FFD700]">even better</span>
+            <span className="bg-gradient-to-r from-[#EC512B] to-[#F58F49] inline-block text-transparent bg-clip-text">even better</span>
           </h1>
           
           <p className="text-lg text-gray-300 max-w-2xl mb-8">
@@ -21,8 +21,15 @@ export function Hero() {
             Let's take your awesome business to the next level.
           </p>
           
-          <button className="flex items-center gap-2 bg-white text-black px-6 py-3 rounded-full mb-16">
-            Book a discovery call →
+          <button className="flex items-center gap-3 bg-white text-black px-6 py-3 rounded-full mb-24 hover:bg-gray-100 transition-colors">
+            Book a discovery call
+            <Image 
+              src="/assets/arrow.svg"
+              alt="Arrow"
+              width={20}
+              height={20}
+              className="w-5 h-5"
+            />
           </button>
 
           <div className="relative w-full max-w-6xl">
