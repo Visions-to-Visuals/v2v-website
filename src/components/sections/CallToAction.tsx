@@ -45,10 +45,10 @@ export function CallToAction() {
           <p className="mb-8">Here's what to expect in our 45-minute discovery call:</p>
 
           {/* Steps */}
-          <div className="flex flex-row gap-8 w-full max-w-3xl">
+          <div className="flex flex-col md:flex-row gap-8 w-full max-w-3xl">
             {steps.map((step) => (
               <div key={step.number} className="flex items-center gap-4 flex-1">
-                <span className="flex items-center justify-center w-12 h-12 bg-black text-white text-xl font-bold rounded-lg">
+                <span className="flex items-center justify-center w-12 h-12 bg-black text-white text-xl font-bold rounded-lg shrink-0">
                   {step.number}
                 </span>
                 <p className="text-lg whitespace-nowrap">{step.title}</p>
