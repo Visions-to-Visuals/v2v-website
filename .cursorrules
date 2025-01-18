@@ -45,3 +45,6 @@ When the user uses /pr:
 
 When the user uses /undo:
     1. Attempt to undo whatever you have just done, whether that means removing a PR, undoing a commit, or something else.
+
+# Documentation For Use by Cursor AI
+docs/component-creation-process.md
