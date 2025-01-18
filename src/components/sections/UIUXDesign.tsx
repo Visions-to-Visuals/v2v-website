@@ -5,7 +5,7 @@ export function UIUXDesign() {
     <section className="flex items-center justify-center w-full bg-black text-white py-20">
       <div className="flex flex-col lg:flex-row max-w-7xl mx-auto px-4 gap-12 justify-between">
         {/* Left Column */}
-        <div className="flex flex-col gap-6 lg:w-1/3">
+        <div className="flex flex-col gap-6 lg:w-2/5">
           <div className="flex flex-col gap-1">
             <span className="text-[#FFE45B]">OUR CUSTOM AND TAILORED</span>
             <h2 className="text-4xl">Website Design UI/UX</h2>
