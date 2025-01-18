@@ -6,9 +6,9 @@ This document outlines our standardized process for creating new components from
 
 ## User Instruction
 1. I'll provide an image of the specific section in the figma design and add all required assets to the assets folder
-2. You'll describe the image and give me psudocode that would create that structure
-3. I'll conform if that psudo code looks right or not.
-4. You'll create files and content for the section with very basic styling. (we'll be coming back to styling later)
+2. You'll describe the image and give me pseudocode that would create that structure
+3. **IMPORTANT**: Wait for explicit user confirmation on the pseudocode before proceeding
+4. Only after user confirmation, create files and content for the section with very basic styling. (we'll be coming back to styling later)
 
 
 ## Step-by-Step Process
@@ -19,16 +19,18 @@ This document outlines our standardized process for creating new components from
 - Identify any required assets (images, icons, etc.)
 - Ensure all required assets are added to the assets folder
 
-### 2. Structure Planning
+### 2. Structure Planning (REQUIRES USER CONFIRMATION)
 - Create pseudocode that outlines:
   - Component hierarchy
   - HTML structure
   - Parent-child relationships
   - Required props and interfaces
   - Basic component organization
-- Get confirmation on the proposed structure before proceeding
+- Present pseudocode to user
+- **STOP HERE** and wait for explicit user confirmation
+- Only proceed after receiving clear approval on the proposed structure
 
-### 3. Initial Implementation
+### 3. Initial Implementation (ONLY AFTER PSEUDOCODE APPROVAL)
 Create the base component files with:
 - Proper imports
 - Basic JSX structure
