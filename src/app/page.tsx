@@ -4,6 +4,7 @@ import { UIUXDesign } from '@/components/sections/UIUXDesign'
 import { WebsiteDevelopment } from '@/components/sections/WebsiteDevelopment'
 import { TeamSection } from '@/components/sections/TeamSection'
 import { PortfolioSection } from '@/components/sections/PortfolioSection'
+import { CallToAction } from '@/components/sections/CallToAction'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <WebsiteDevelopment />
       <TeamSection />
       <PortfolioSection />
+      <CallToAction />
     </>
   )
 }
