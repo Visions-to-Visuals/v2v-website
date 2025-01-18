@@ -6,6 +6,7 @@ import { TeamSection } from '@/components/sections/TeamSection'
 import { PortfolioSection } from '@/components/sections/PortfolioSection'
 import { CallToAction } from '@/components/sections/CallToAction'
 import { FAQSection } from '@/components/sections/FAQSection'
+import { Footer } from '@/components/layout/Footer'
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <PortfolioSection />
       <CallToAction />
       <FAQSection />
+      <Footer />
     </>
   )
 }
