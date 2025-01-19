@@ -14,23 +14,32 @@ interface Project {
 
 function BeforeAfterToggle({ isAfter, onChange }: { isAfter: boolean; onChange: (isAfter: boolean) => void }) {
   return (
-    <div className="flex items-center bg-black/80 backdrop-blur rounded-full p-1">
-      <button
-        onClick={() => onChange(false)}
-        className={`px-3 py-1 rounded-full text-sm transition-colors ${
-          !isAfter ? 'bg-white text-black' : 'text-white'
-        }`}
-      >
-        Before
-      </button>
-      <button
-        onClick={() => onChange(true)}
-        className={`px-3 py-1 rounded-full text-sm transition-colors ${
-          isAfter ? 'bg-[#FF6B6B] text-white' : 'text-white'
-        }`}
-      >
-        After
-      </button>
+    <div className="relative w-[200px] h-[40px] rounded-full bg-black border-2 border-white p-[2px]">
+      <div className="relative w-full h-full rounded-full overflow-hidden">
+        <div 
+          className={`absolute inset-0 w-1/2 h-full rounded-full transition-transform duration-300 ease-in-out ${
+            isAfter ? 'translate-x-full bg-gradient-to-r from-[#FF6B6B] to-[#FFD700]' : 'translate-x-0 bg-gradient-to-r from-[#FF6B6B] to-[#FFD700]'
+          }`}
+        />
+        <div className="absolute inset-0 flex">
+          <button
+            onClick={() => onChange(false)}
+            className={`flex-1 flex items-center justify-center text-sm font-medium transition-colors ${
+              !isAfter ? 'text-black' : 'text-white'
+            }`}
+          >
+            Before
+          </button>
+          <button
+            onClick={() => onChange(true)}
+            className={`flex-1 flex items-center justify-center text-sm font-medium transition-colors ${
+              isAfter ? 'text-black' : 'text-white'
+            }`}
+          >
+            After
+          </button>
+        </div>
+      </div>
     </div>
   )
 }
@@ -42,7 +51,7 @@ function ProjectCard({ project }: { project: Project }) {
     <div className="flex flex-col">
       {/* Header */}
       <div className="flex justify-between items-center mb-4">
-        <h3 className="text-2xl">{project.title}</h3>
+        <h3 className="text-xl">{project.title}</h3>
         <BeforeAfterToggle isAfter={isAfter} onChange={setIsAfter} />
       </div>
 
@@ -60,19 +69,25 @@ function ProjectCard({ project }: { project: Project }) {
       <div className="flex justify-between items-center">
         <div className="flex items-center gap-4">
           <p className="text-gray-400">{project.date}</p>
-          {project.status && (
-            <span className="text-gray-400">{project.status}</span>
-          )}
         </div>
-        {project.visitUrl && (
+        {project.visitUrl ? (
           <a 
             href={project.visitUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-[#FFD700] hover:text-white transition-colors"
+            className="flex items-center gap-2 hover:text-white transition-colors underline"
           >
-            Visit Website →
+            Visit Website
+            <Image 
+              src="/assets/arrow-diagonal.svg"
+              alt="Arrow"
+              width={20}
+              height={20}
+              className="w-5 h-5"
+            />
           </a>
+        ) : project.status && (
+          <span className="">{project.status}</span>
         )}
       </div>
     </div>
@@ -124,7 +139,7 @@ export function PortfolioSection() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           {projects.map((project) => (
             <ProjectCard key={project.title} project={project} />
           ))}
