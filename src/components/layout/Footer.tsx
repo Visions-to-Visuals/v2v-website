@@ -1,132 +1,87 @@
 import React from 'react'
 import Image from 'next/image'
 
-interface FooterColumn {
-  title?: string;
-  content: {
-    type: 'logo' | 'links' | 'contact';
-    items?: { label: string; href: string; }[];
-    logo?: { src: string; alt: string; };
-    button?: { label: string; href: string; };
-    copyright?: string;
-  };
-}
-
 export function Footer() {
-  const columns: FooterColumn[] = [
-    {
-      content: {
-        type: 'logo',
-        logo: { src: '/assets/logo-v2v.png', alt: 'Visions to Visuals' },
-        button: { label: 'Book a discovery call', href: '#' },
-        copyright: '© 2025 Visions to Visuals. All Rights Reserved.'
-      }
-    },
-    {
-      title: 'Resources',
-      content: {
-        type: 'links',
-        items: [
-          { label: 'Our Services', href: '/services' },
-          { label: 'Our Team', href: '/team' },
-          { label: 'Our Work', href: '/work' },
-          { label: 'Our FAQ', href: '/faq' }
-        ]
-      }
-    },
-    {
-      title: 'Past Projects',
-      content: {
-        type: 'links',
-        items: [
-          { label: 'California Invention Convention', href: '#' },
-          { label: 'Golden State Ponds', href: '#' },
-          { label: 'ChalkWild', href: '#' },
-          { label: "All People's Presbyterian Church", href: '#' }
-        ]
-      }
-    },
-    {
-      title: 'Contact',
-      content: {
-        type: 'contact',
-        items: [
-          { label: 'contact@visionstovisuals.com', href: 'mailto:contact@visionstovisuals.com' },
-          { label: '209-232-6678', href: 'tel:209-232-6678' }
-        ]
-      }
-    }
-  ];
-
   return (
     <footer className="bg-white text-black border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {columns.map((column, index) => (
-            <div key={column.title || index} className="flex flex-col">
-              {column.title && (
-                <h3 className="font-bold mb-4">{column.title}</h3>
-              )}
-              
-              {column.content.type === 'logo' && (
-                <>
-                  <Image 
-                    src={column.content.logo!.src}
-                    alt={column.content.logo!.alt}
-                    width={135}
-                    height={40}
-                    className="mb-4"
-                  />
-                  <button className="flex items-center gap-2 text-black hover:text-gray-600 transition-colors mb-8">
-                    {column.content.button!.label} →
-                  </button>
-                  <p className="text-sm text-gray-500 mt-auto">
-                    {column.content.copyright}
-                  </p>
-                </>
-              )}
+        <div className="flex flex-col md:flex-row gap-8 md:gap-16">
+          {/* Logo Section */}
+          <div className="flex flex-col">
+            <Image 
+              src="/assets/full-logo-dark.png"
+              alt="Visions to Visuals"
+              width={228}
+              height={40}
+              className="mb-4"
+            />
+            <button className="flex items-center gap-2 text-black hover:text-gray-600 transition-colors mb-8 underline">
+              Book a discovery call
+              <Image 
+                src="/assets/diagonal-arrow-dark.svg"
+                alt="Arrow"
+                width={20}
+                height={20}
+                className="w-5 h-5"
+              />
+            </button>
+            <p className="text-sm text-gray-500 mt-auto">
+              © 2025 Visions to Visuals. All Rights Reserved.
+            </p>
+          </div>
 
-              {column.content.type === 'links' && (
-                <ul className="space-y-2">
-                  {column.content.items!.map((item) => (
-                    <li key={item.label}>
-                      <a 
-                        href={item.href} 
-                        className="text-gray-600 hover:text-black transition-colors"
-                      >
-                        {item.label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              )}
+          {/* Resources Section */}
+          <div className="min-w-[140px]">
+            <h3 className="font-bold mb-4">Resources</h3>
+            <ul className="space-y-2">
+              <li><a href="/services" className="text-gray-600 hover:text-black transition-colors">Our Services</a></li>
+              <li><a href="/team" className="text-gray-600 hover:text-black transition-colors">Our Team</a></li>
+              <li><a href="/work" className="text-gray-600 hover:text-black transition-colors">Our Work</a></li>
+              <li><a href="/faq" className="text-gray-600 hover:text-black transition-colors">Our FAQ</a></li>
+            </ul>
+          </div>
 
-              {column.content.type === 'contact' && (
-                <>
-                  <ul className="space-y-2 mb-4">
-                    {column.content.items!.map((item) => (
-                      <li key={item.label}>
-                        <a 
-                          href={item.href} 
-                          className="text-gray-600 hover:text-black transition-colors"
-                        >
-                          {item.label}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="flex gap-4">
-                    <a href="#" aria-label="LinkedIn" className="hover:opacity-80 transition-opacity">
-                      <Image src="/assets/linkedin.png" alt="" width={24} height={24} />
-                    </a>
-                    <a href="#" aria-label="Clutch" className="hover:opacity-80 transition-opacity">
-                      <Image src="/assets/clutch.png" alt="" width={24} height={24} />
-                    </a>
-                  </div>
-                </>
-              )}
+          {/* Past Projects Section */}
+          <div className="min-w-[200px]">
+            <h3 className="font-bold mb-4">Past Projects</h3>
+            <ul className="space-y-2">
+              <li><a href="#" className="text-gray-600 hover:text-black transition-colors">California Invention Convention</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-black transition-colors">Golden State Ponds</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-black transition-colors">ChalkWild</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-black transition-colors">All People's Presbyterian Church</a></li>
+            </ul>
+          </div>
+
+          {/* Contact Section */}
+          <div className="min-w-[140px]">
+            <h3 className="font-bold mb-4">Contact</h3>
+            <ul className="space-y-2 mb-4">
+              <li><a href="mailto:contact@visionstovisuals.com" className="text-gray-600 hover:text-black transition-colors flex items-center gap-2">
+                <Image 
+                  src="/assets/email-icon.svg"
+                  alt="Email"
+                  width={12}
+                  height={12}
+                />
+                contact@visionstovisuals.com</a></li>
+              <li><a href="tel:209-232-6678" className="text-gray-600 hover:text-black transition-colors flex items-center gap-2">
+                <Image 
+                  src="/assets/phone-icon.svg"
+                  alt="Phone"
+                  width={12}
+                  height={12}
+                />
+                209-232-6678</a></li>
+            </ul>
+            <div className="flex gap-4">
+              <a href="#" aria-label="LinkedIn" className="hover:opacity-80 transition-opacity">
+                <Image src="/assets/linkedin.png" alt="" width={20} height={20} />
+              </a>
+              <a href="#" aria-label="Calendly" className="hover:opacity-80 transition-opacity">
+                <Image src="/assets/calendly.png" alt="" width={20} height={20} />
+              </a>
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </footer>
