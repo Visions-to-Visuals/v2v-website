@@ -7,12 +7,12 @@ export function Hero() {
         <div className="flex flex-col items-center text-center">
           <span className="text-[#FFE45B] mb-6">TRUSTED DESIGN AND DEVELOPMENT AGENCY</span>
           
-          <h1 className="text-5xl font-bold mb-6 max-w-3xl">
+          <h1 className="text-5xl font-bold mb-6 max-w-3xl leading-[56px]">
             Creating websites that look{' '}
-            <span className="bg-gradient-to-r from-[#EC512B] to-[#F5BF49] inline-block text-transparent bg-clip-text">great</span>
+            <span className="bg-gradient-to-r from-[#EC512B] to-[#F5BF49] text-transparent bg-clip-text">great</span>
             <br />
             and perform{' '}
-            <span className="bg-gradient-to-r from-[#EC512B] to-[#F58F49] inline-block text-transparent bg-clip-text">even better</span>
+            <span className="bg-gradient-to-r from-[#EC512B] to-[#F58F49] text-transparent bg-clip-text">even better</span>
           </h1>
           
           <p className="text-lg text-gray-300 max-w-2xl mb-8">
