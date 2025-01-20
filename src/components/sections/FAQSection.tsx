@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from 'react'
+import Image from 'next/image'
 
 interface FAQ {
   question: string;
@@ -11,15 +12,19 @@ function FAQItem({ faq }: { faq: FAQ }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border border-gray-200 rounded-lg overflow-hidden mb-4">
+    <div className={`border rounded-lg overflow-hidden mb-4 ${isOpen ? 'border-[#ed853f]' : 'border-gray-200'}`}>
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex items-center justify-between p-6 text-left"
       >
         <span className="text-lg">{faq.question}</span>
-        <span className={`transform transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}>
-          ▼
-        </span>
+        <Image 
+          src="/assets/faq-dropdown.svg"
+          alt="Dropdown arrow"
+          width={10}
+          height={16}
+          className={`transform transition-transform duration-200 ${isOpen ? 'rotate-90' : ''}`}
+        />
       </button>
       
       <div 
@@ -61,7 +66,7 @@ export function FAQSection() {
     <section className="flex flex-col items-center w-full bg-white text-black py-20">
       <div className="max-w-3xl mx-auto px-4 w-full">
         {/* Section Title */}
-        <h2 className="text-4xl text-center mb-12">Frequently Asked Questions</h2>
+        <p className="mb-8 text-[#3D3D3D] text-center">Frequently Asked Questions</p>
 
         {/* FAQ List */}
         <div className="w-full">
