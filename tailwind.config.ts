@@ -11,6 +11,7 @@ export default {
       screens: {
         'break': '825px',
         'mobile': '496px',
+        'uiuxbreak': '930px',
       },
       colors: {
         white: '#FFFFFF',
