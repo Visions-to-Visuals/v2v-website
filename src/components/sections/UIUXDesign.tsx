@@ -7,7 +7,7 @@ export function UIUXDesign() {
         {/* Left Column */}
         <div className="flex flex-col gap-6 lg:w-2/5">
           <div className="flex flex-col gap-1">
-            <span className="text-[#FFE45B]">OUR CUSTOM AND TAILORED</span>
+            <span className="text-[12px] md:text-base text-[#FFE45B]">OUR CUSTOM AND TAILORED</span>
             <h2 className="text-4xl">Website Design UI/UX</h2>
           </div>
           

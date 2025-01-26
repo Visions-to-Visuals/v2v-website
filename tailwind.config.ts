@@ -8,6 +8,10 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        'break': '825px',
+        'mobile': '496px',
+      },
       colors: {
         white: '#FFFFFF',
         'bg-white': '#FCFCFC',

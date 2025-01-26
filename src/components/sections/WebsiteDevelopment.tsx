@@ -18,7 +18,7 @@ export function WebsiteDevelopment() {
         {/* Right Column */}
         <div className="flex flex-col gap-6 lg:w-2/5">
           <div className="flex flex-col gap-1">
-            <span className="text-[#FFE45B]">OUR MODERN AND SECURE</span>
+            <span className="text-[12px] md:text-base text-[#FFE45B]">OUR MODERN AND SECURE</span>
             <h2 className="text-4xl">Website Development</h2>
           </div>
           

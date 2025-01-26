@@ -2,26 +2,29 @@ import Image from 'next/image'
 
 export function Hero() {
   return (
-    <section className="flex flex-col items-center w-full bg-black text-white">
+    <section className="relative flex flex-col items-center w-full bg-black text-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 w-full py-20">
         <div className="flex flex-col items-center text-center">
-          <span className="text-[#FFE45B] mb-6">TRUSTED DESIGN AND DEVELOPMENT AGENCY</span>
+          <span className="text-[12px] md:text-base text-[#FFE45B] mb-1">TRUSTED DESIGN AND DEVELOPMENT AGENCY</span>
           
-          <h1 className="text-5xl font-bold mb-6 max-w-3xl leading-[56px]">
-            Creating websites that look{' '}
+          <h1 className="text-[32px] md:text-5xl font-bold mb-6 max-w-4xl leading-[38.4px] md:leading-[56px]">
+            <span className="hidden break:inline">Creating websites that look{' '}</span>
+            <span className="break:hidden">Creating websites that look{' '}</span>
             <span className="bg-gradient-to-r from-[#EC512B] to-[#F5BF49] text-transparent bg-clip-text">great</span>
-            <br />
+            <span className="hidden break:inline"><br /></span>
+            <span className="break:hidden">{' '}</span>
             and perform{' '}
             <span className="bg-gradient-to-r from-[#EC512B] to-[#F58F49] text-transparent bg-clip-text">even better</span>
           </h1>
           
           <p className="text-lg text-gray-300 max-w-2xl mb-8">
             We specialize in web design, development and branding.
-            <br />
+            <span className="hidden mobile:inline"><br /></span>
+            <span className="mobile:hidden">{' '}</span>
             Let's take your awesome business to the next level.
           </p>
           
-          <button className="flex items-center gap-3 bg-white text-black px-6 py-3 rounded-full mb-24 hover:bg-gray-100 transition-colors">
+          <button className="w-[calc(100%-2rem)] mobile:w-auto flex items-center justify-center gap-3 bg-white text-black px-6 py-3 rounded-full mb-24 hover:bg-gray-100 transition-colors">
             Book a discovery call
             <Image 
               src="/assets/arrow.svg"
@@ -32,7 +35,7 @@ export function Hero() {
             />
           </button>
 
-          <div className="relative w-full max-w-6xl">
+          <div className="relative w-full max-w-6xl mx-auto">
             <Image 
               src="/assets/best-work.png" 
               alt="Our best work showcase"

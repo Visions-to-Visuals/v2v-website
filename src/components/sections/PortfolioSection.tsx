@@ -134,7 +134,7 @@ export function PortfolioSection() {
       <div className="max-w-7xl mx-auto px-4 w-full">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="text-[#FFD700] block mb-4">REAL CLIENTS WITH REAL SOLUTIONS</span>
+          <span className="text-[12px] md:text-base text-[#FFD700] block mb-4">REAL CLIENTS WITH REAL SOLUTIONS</span>
           <h2 className="text-4xl">See our latest projects</h2>
         </div>
 
