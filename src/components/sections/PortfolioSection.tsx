@@ -14,7 +14,7 @@ interface Project {
 
 function BeforeAfterToggle({ isAfter, onChange }: { isAfter: boolean; onChange: (isAfter: boolean) => void }) {
   return (
-    <div className="relative w-[200px] h-[40px] rounded-full bg-black border-2 border-white p-[2px]">
+    <div className="relative mt-4 md:mt-0 w-full md:w-[200px] h-[40px] rounded-full bg-black border-2 border-white p-[2px]">
       <div className="relative w-full h-full rounded-full overflow-hidden">
         <div 
           className={`absolute inset-0 w-1/2 h-full rounded-full transition-transform duration-300 ease-in-out ${
@@ -50,18 +50,28 @@ function ProjectCard({ project }: { project: Project }) {
   return (
     <div className="flex flex-col">
       {/* Header */}
-      <div className="flex justify-between items-center mb-4">
+      <div className="flex justify-between items-center md:flex-row flex-col mb-4">
         <h3 className="text-xl">{project.title}</h3>
         <BeforeAfterToggle isAfter={isAfter} onChange={setIsAfter} />
       </div>
 
       {/* Image */}
-      <div className="relative aspect-[16/9] w-full mb-4">
+      <div className="relative aspect-[16/9] w-full mb-4 overflow-hidden rounded-lg">
         <Image
-          src={isAfter ? project.afterImage : project.beforeImage}
-          alt={`${project.title} ${isAfter ? 'after' : 'before'} redesign`}
+          src={project.beforeImage}
+          alt={`${project.title} before redesign`}
           fill
-          className="object-cover transition-opacity duration-300 rounded-lg"
+          className={`object-cover transition-transform duration-500 absolute inset-0 ${
+            isAfter ? '-translate-x-full' : 'translate-x-0'
+          }`}
+        />
+        <Image
+          src={project.afterImage}
+          alt={`${project.title} after redesign`}
+          fill
+          className={`object-cover transition-transform duration-500 absolute inset-0 ${
+            isAfter ? 'translate-x-0' : 'translate-x-full'
+          }`}
         />
       </div>
 
@@ -134,8 +144,8 @@ export function PortfolioSection() {
       <div className="max-w-7xl mx-auto px-4 w-full">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="text-[12px] md:text-base text-[#FFD700] block mb-4">REAL CLIENTS WITH REAL SOLUTIONS</span>
-          <h2 className="text-4xl">See our latest projects</h2>
+          <span className="text-[12px] md:text-base text-[#FFD700] block mb-0 md:mb-4">REAL CLIENTS WITH REAL SOLUTIONS</span>
+          <h2 className="text-[28px] md:text-4xl">See our latest projects</h2>
         </div>
 
         {/* Projects Grid */}

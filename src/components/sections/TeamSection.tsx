@@ -81,7 +81,7 @@ export function TeamSection() {
             efficient, and successful. Let us elevate your online presence and make an impact by
             transforming your vision into a visual experience.
           </p>
-          <button className="mt-12 md:mt-0 w-[calc(100%-2rem)] mobile:w-auto flex items-center justify-center gap-3 bg-white text-black px-6 py-3 rounded-full mb-24 hover:bg-gray-100 transition-colors">
+          <button className="mt-6 md:mt-0 w-[calc(100%-2rem)] mobile:w-auto flex items-center justify-center gap-3 bg-white text-black px-6 py-3 rounded-full mb-8 md:mb-24 hover:bg-gray-100 transition-colors">
             Book a discovery call
             <Image 
               src="/assets/arrow.svg"
