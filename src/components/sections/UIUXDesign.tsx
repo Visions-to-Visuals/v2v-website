@@ -74,13 +74,13 @@ export function UIUXDesign() {
         </div>
 
         {/* Right Column */}
-        <div className="lg:w-1/2">
+        <div className="lg:w-1/2 flex justify-center">
           <Image 
             src="/assets/ui-examples.png"
             alt="Collection of UI/UX design examples showing various interfaces and mockups"
             width={600}
             height={600}
-            className="w-full h-auto"
+            className="w-full h-auto max-w-[500px] uiuxbreak:max-w-full"
           />
         </div>
       </div>
