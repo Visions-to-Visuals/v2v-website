@@ -17,7 +17,7 @@ function FAQItem({ faq }: { faq: FAQ }) {
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex items-center justify-between p-6 text-left"
       >
-        <span className="text-lg">{faq.question}</span>
+        <span className="text-lg max-w-[80%]">{faq.question}</span>
         <Image 
           src="/assets/faq-dropdown.svg"
           alt="Dropdown arrow"
