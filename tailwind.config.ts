@@ -12,6 +12,7 @@ export default {
         'break': '825px',
         'mobile': '496px',
         'uiuxbreak': '930px',
+        'morestars': '1324px',
       },
       colors: {
         white: '#FFFFFF',

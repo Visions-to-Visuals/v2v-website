@@ -59,29 +59,29 @@ export function CallToAction() {
       `}</style>
 
       {/* Decorative Stars */}
-      <div className="absolute top-36 left-[15%] star-float-1">
+      <div className="absolute top-48 sm:top-16 lg:top-36 left-[7%] lg:left-[15%] star-float-1">
         <Image src="/assets/Star.svg" alt="" width={starSizes[0]} height={starSizes[0]} />
       </div>
-      <div className="absolute top-36 right-[15%] star-float-2">
+      <div className="absolute top-48 sm:top-16 lg:top-36 right-[7%] lg:right-[15%] star-float-2">
         <Image src="/assets/Star.svg" alt="" width={starSizes[1]} height={starSizes[1]} />
       </div>
-      <div className="absolute top-28 left-[25%] star-float-3">
+      <div className="absolute top-28 left-[25%] star-float-3 hidden morestars:block">
         <Image src="/assets/Star.svg" alt="" width={starSizes[2]} height={starSizes[2]} />
       </div>
-      <div className="absolute top-28 right-[25%] star-float-4">
+      <div className="absolute top-28 right-[25%] star-float-4 hidden morestars:block">
         <Image src="/assets/Star.svg" alt="" width={starSizes[3]} height={starSizes[3]} />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 w-full relative">
         <div className="flex flex-col items-center text-center">
           {/* Top Tag */}
-          <span className="text-[#FF6B6B] mb-6">IT'S ABOUT WORKING WITH THE RIGHT PEOPLE</span>
+          <span className="text-[#FF6B6B] md:mb-6">IT'S ABOUT WORKING WITH THE RIGHT PEOPLE</span>
 
           {/* Main Title */}
-          <h2 className="text-4xl mb-24">Ready to level up your business?</h2>
+          <h2 className="text-4xl mb-12 md:mb-24">Ready to level up your business?</h2>
 
           {/* CTA Button */}
-          <button className="flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full mb-32">
+          <button className="flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full mb-12 md:mb-32">
             Yes, let's talk business
             <Image 
               src="/assets/arrow-white.svg"
@@ -96,15 +96,17 @@ export function CallToAction() {
           <p className="mb-8 text-[#3D3D3D]">Here's what to expect in our 45-minute discovery call:</p>
 
           {/* Steps */}
-          <div className="flex flex-col md:flex-row gap-8 w-full max-w-3xl">
-            {steps.map((step) => (
-              <div key={step.number} className="flex items-center gap-4 flex-1">
-                <span className="flex items-center justify-center w-12 h-12 bg-black text-white text-xl font-bold rounded-lg shrink-0">
-                  {step.number}
-                </span>
-                <p className="text-lg whitespace-nowrap text-[#000000] font-medium">{step.title}</p>
-              </div>
-            ))}
+          <div className="flex justify-center w-full">
+            <div className="flex flex-col uiuxbreak:flex-row gap-6 uiuxbreak:gap-8">
+              {steps.map((step) => (
+                <div key={step.number} className="flex items-center gap-4">
+                  <div className="flex items-center justify-center w-9 h-9 bg-black text-white text-base font-medium rounded-lg shrink-0">
+                    {step.number}
+                  </div>
+                  <p className="text-lg text-[#000000] whitespace-nowrap">{step.title}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
