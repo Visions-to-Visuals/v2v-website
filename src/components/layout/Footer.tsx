@@ -15,7 +15,7 @@ export function Footer() {
               height={40}
               className="mb-4"
             />
-            <button className="flex items-center gap-2 text-black hover:text-gray-600 transition-colors mb-8 underline">
+            <button className="flex items-center gap-2 text-black hover:text-gray-600 transition-colors md:mb-8 underline">
               Book a discovery call
               <Image 
                 src="/assets/diagonal-arrow-dark.svg"
@@ -25,7 +25,7 @@ export function Footer() {
                 className="w-5 h-5"
               />
             </button>
-            <p className="text-sm text-gray-500 mt-auto">
+            <p className="text-sm text-gray-500 mt-auto hidden md:block">
               © 2025 Visions to Visuals. All Rights Reserved.
             </p>
           </div>
@@ -83,6 +83,11 @@ export function Footer() {
             </div>
           </div>
         </div>
+
+        {/* Mobile copyright notice */}
+        <p className="text-sm text-gray-500 pt-8 md:hidden">
+          © 2025 Visions to Visuals. All Rights Reserved.
+        </p>
       </div>
     </footer>
   );
