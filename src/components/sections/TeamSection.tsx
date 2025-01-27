@@ -31,11 +31,11 @@ export function TeamSection() {
 
   return (
     <section className="flex flex-col items-center w-full bg-black text-white py-12 md:py-20">
-      <div className="max-w-7xl mx-auto px-4 w-full">
+      <div className="max-w-7xl mx-auto px-8 w-full">
         {/* Header */}
         <div className="text-center mb-6 md:mb-16">
           <span className="text-[12px] md:text-base text-[#FFE45B] block mb-2">WE'RE MORE THAN JUST YOUR AVERAGE TEAM</span>
-          <h2 className="text-2xl md:text-4xl">We work with you every step of the way</h2>
+          <h2 className="text-m-h2 md:text-h2">We work with you every step of the way</h2>
         </div>
 
         {/* Team Members Grid */}

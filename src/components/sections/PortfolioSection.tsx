@@ -141,11 +141,11 @@ export function PortfolioSection() {
 
   return (
     <section className="flex flex-col items-center w-full bg-black text-white py-20">
-      <div className="max-w-7xl mx-auto px-4 w-full">
+      <div className="max-w-7xl mx-auto px-8 w-full">
         {/* Header */}
         <div className="text-center mb-16">
           <span className="text-[12px] md:text-base text-[#FFD700] block mb-0 md:mb-4">REAL CLIENTS WITH REAL SOLUTIONS</span>
-          <h2 className="text-[28px] md:text-4xl">See our latest projects</h2>
+          <h2 className="text-m-h2 md:text-h2">See our latest projects</h2>
         </div>
 
         {/* Projects Grid */}

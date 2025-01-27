@@ -3,11 +3,11 @@ import Image from 'next/image'
 export function Hero() {
   return (
     <section className="relative flex flex-col items-center w-full bg-black text-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 w-full py-20">
+      <div className="max-w-7xl mx-auto px-8 w-full py-20">
         <div className="flex flex-col items-center text-center">
           <span className="text-[12px] md:text-base text-[#FFE45B] mb-1">TRUSTED DESIGN AND DEVELOPMENT AGENCY</span>
           
-          <h1 className="text-[32px] md:text-5xl font-bold mb-6 max-w-4xl leading-[38.4px] md:leading-[56px]">
+          <h1 className="text-h1 mb-6 max-w-4xl">
             <span className="hidden break:inline">Creating websites that look{' '}</span>
             <span className="break:hidden">Creating websites that look{' '}</span>
             <span className="bg-gradient-to-r from-[#EC512B] to-[#F5BF49] text-transparent bg-clip-text">great</span>
