@@ -28,7 +28,7 @@ export function CallToAction() {
   }, []); // Empty dependency array means this runs once on mount
 
   return (
-    <section className="flex flex-col items-center w-full bg-white text-black py-20 relative">
+    <section className="flex flex-col items-center w-full bg-white text-black pb-20 pt-24 relative">
       <style jsx>{`
         @keyframes float {
           0% {
@@ -75,13 +75,13 @@ export function CallToAction() {
       <div className="max-w-7xl mx-auto px-4 w-full relative">
         <div className="flex flex-col items-center text-center">
           {/* Top Tag */}
-          <span className="text-[#FF6B6B] md:mb-6">IT'S ABOUT WORKING WITH THE RIGHT PEOPLE</span>
+          <span className="text-[#EA3D25] text-[14px]">IT'S ABOUT WORKING WITH THE RIGHT PEOPLE</span>
 
           {/* Main Title */}
-          <h2 className="text-4xl mb-12 md:mb-24">Ready to level up your business?</h2>
+          <h2 className="text-m-h2 mb-12 md:mb-24 md:text-h2">Ready to level up your business?</h2>
 
           {/* CTA Button */}
-          <button className="flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full mb-12 md:mb-32">
+          <button className="flex font-[500] items-center gap-2 bg-black text-white px-6 py-3 rounded-full mb-12 md:mb-32">
             Yes, let's talk business
             <Image 
               src="/assets/arrow-white.svg"
@@ -93,17 +93,17 @@ export function CallToAction() {
           </button>
 
           {/* Discovery Call Info */}
-          <p className="mb-8 text-[#3D3D3D]">Here's what to expect in our 45-minute discovery call:</p>
+          <p className="mb-8 text-[#3D3D3D] text-[18px]">Here's what to expect in our 45-minute discovery call:</p>
 
           {/* Steps */}
           <div className="flex justify-center w-full">
-            <div className="flex flex-col uiuxbreak:flex-row gap-6 uiuxbreak:gap-8">
+            <div className="flex flex-col uiuxbreak:flex-row gap-6 uiuxbreak:gap-16">
               {steps.map((step) => (
-                <div key={step.number} className="flex items-center gap-4">
-                  <div className="flex items-center justify-center w-9 h-9 bg-black text-white text-base font-medium rounded-lg shrink-0">
+                <div key={step.number} className="flex items-center gap-2">
+                  <div className="flex items-center justify-center w-9 h-9 text-[24px] bg-black text-white text-base font-[600] rounded-lg shrink-0">
                     {step.number}
                   </div>
-                  <p className="text-lg text-[#000000] whitespace-nowrap">{step.title}</p>
+                  <p className="text-[18px] text-[#000000] whitespace-nowrap font-[500]">{step.title}</p>
                 </div>
               ))}
             </div>

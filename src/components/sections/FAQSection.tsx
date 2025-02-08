@@ -17,7 +17,7 @@ function FAQItem({ faq }: { faq: FAQ }) {
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex items-center justify-between p-6 text-left"
       >
-        <span className="text-lg max-w-[80%]">{faq.question}</span>
+        <span className="text-[16px] font-[500] max-w-[80%]">{faq.question}</span>
         <Image 
           src="/assets/faq-dropdown.svg"
           alt="Dropdown arrow"
@@ -32,7 +32,7 @@ function FAQItem({ faq }: { faq: FAQ }) {
           isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <p className="p-6 pt-0 text-p2">{faq.answer}</p>
+        <p className="px-6 pt-0 pb-6 text-[16px] text-[#3D3D3D]">{faq.answer}</p>
       </div>
     </div>
   );
@@ -63,10 +63,10 @@ export function FAQSection() {
   ];
 
   return (
-    <section className="flex flex-col items-center w-full bg-white text-black py-20">
-      <div className="max-w-3xl mx-auto px-8 w-full">
+    <section className="flex flex-col items-center w-full bg-white text-black pt-20 pb-32">
+      <div className="max-w-[800px] mx-auto px-8 w-full">
         {/* Section Title */}
-        <p className="mb-8 text-[#3D3D3D] text-center">Frequently Asked Questions</p>
+        <p className="mb-6 text-[#3D3D3D] text-center text-[18px]">Frequently Asked Questions</p>
 
         {/* FAQ List */}
         <div className="w-full">

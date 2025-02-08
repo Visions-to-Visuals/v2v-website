@@ -35,7 +35,7 @@ export function TeamSection() {
       <div className="max-w-[1000px] mx-auto px-8 w-full">
         {/* Header */}
         <div className="text-center mb-12">
-          <span className="text-[12px] md:text-base text-[#FFD700] block">WE'RE MORE THAN JUST YOUR AVERAGE TEAM</span>
+          <span className="text-[14px] text-[#FFD700] block">WE'RE MORE THAN JUST YOUR AVERAGE TEAM</span>
           <h2 className="text-m-h2 md:text-h2">We work with you every step of the way</h2>
         </div>
 
