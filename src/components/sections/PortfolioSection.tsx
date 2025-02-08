@@ -14,7 +14,7 @@ interface Project {
 
 function BeforeAfterToggle({ isAfter, onChange }: { isAfter: boolean; onChange: (isAfter: boolean) => void }) {
   return (
-    <div className="relative mt-4 md:mt-0 w-full md:w-[200px] h-[40px] rounded-full bg-black border-2 border-white p-[2px]">
+    <div className="relative mt-4 md:mt-0 w-full md:w-[200px] h-[32px] rounded-full bg-black  border-white p-[2px]">
       <div className="relative w-full h-full rounded-full overflow-hidden">
         <div 
           className={`absolute inset-0 w-1/2 h-full rounded-full transition-transform duration-300 ease-in-out ${
@@ -50,13 +50,13 @@ function ProjectCard({ project }: { project: Project }) {
   return (
     <div className="flex flex-col">
       {/* Header */}
-      <div className="flex justify-between items-center md:flex-row flex-col mb-4">
+      <div className="flex justify-between items-center md:flex-row flex-col mb-3">
         <h3 className="text-xl">{project.title}</h3>
         <BeforeAfterToggle isAfter={isAfter} onChange={setIsAfter} />
       </div>
 
       {/* Image */}
-      <div className="relative aspect-[16/9] w-full mb-4 overflow-hidden rounded-lg">
+      <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg mb-2">
         <Image
           src={project.beforeImage}
           alt={`${project.title} before redesign`}
@@ -77,15 +77,15 @@ function ProjectCard({ project }: { project: Project }) {
 
       {/* Footer */}
       <div className="flex justify-between items-center">
-        <div className="flex items-center gap-4">
-          <p className="text-gray-400">{project.date}</p>
+        <div className="flex items-center gap-2">
+          <p className="text-gray-300 text-[14px]">{project.date}</p>
         </div>
         {project.visitUrl ? (
           <a 
             href={project.visitUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 hover:text-white transition-colors underline"
+            className="flex items-center gap-2 hover:text-white transition-colors underline text-[14px]"
           >
             Visit Website
             <Image 
@@ -97,7 +97,7 @@ function ProjectCard({ project }: { project: Project }) {
             />
           </a>
         ) : project.status && (
-          <span className="">{project.status}</span>
+          <span className="text-[14px]">{project.status}</span>
         )}
       </div>
     </div>
@@ -119,7 +119,7 @@ export function PortfolioSection() {
       status: "",
       beforeImage: "/assets/before/Golden-State-Ponds.png",
       afterImage: "/assets/after/Golden-State-Ponds.png",
-      visitUrl: "#"
+      visitUrl: "https://www.goldenstateponds.com/"
     },
     {
       title: "ChalkWild",
@@ -127,7 +127,7 @@ export function PortfolioSection() {
       status: "",
       beforeImage: "/assets/before/ChalkWild.png",
       afterImage: "/assets/after/ChalkWild.png",
-      visitUrl: "#"
+      visitUrl: "https://chalkwild.com/"
     },
     {
       title: "All People's Presbyterian Church",
@@ -135,21 +135,21 @@ export function PortfolioSection() {
       status: "",
       beforeImage: "/assets/before/APPC.png",
       afterImage: "/assets/after/APPC.png",
-      visitUrl: "#"
+      visitUrl: "https://www.allpeoplespc.org/"
     }
   ];
 
   return (
-    <section className="flex flex-col items-center w-full bg-black text-white py-20">
-      <div className="max-w-7xl mx-auto px-8 w-full">
+    <section className="flex flex-col items-center justify-between px-8 w-full bg-black text-white pt-20 py-40">
+      <div className="max-w-[1200px] mx-auto w-full">
         {/* Header */}
-        <div className="text-center mb-16">
-          <span className="text-[12px] md:text-base text-[#FFD700] block mb-0 md:mb-4">REAL CLIENTS WITH REAL SOLUTIONS</span>
+        <div className="text-center mb-12">
+          <span className="text-[14px] text-[#FFD700] block">REAL CLIENTS WITH REAL SOLUTIONS</span>
           <h2 className="text-m-h2 md:text-h2">See our latest projects</h2>
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {projects.map((project) => (
             <ProjectCard key={project.title} project={project} />
           ))}

@@ -17,7 +17,7 @@ export function Navbar() {
 
   return (
     <>
-      <div className="h-[88px] bg-black" /> {/* Spacer for fixed navbar */}
+      <div className="bg-black" /> {/* Spacer for fixed navbar */}
       <nav className="fixed top-0 left-0 right-0 w-full bg-black text-white z-50">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex md:grid md:grid-cols-3 items-center justify-between">
@@ -27,7 +27,7 @@ export function Navbar() {
                 <Image 
                   src="/assets/full-logo.png" 
                   alt="Visions to Visuals"
-                  width={180}
+                  width={200}
                   height={50}
                   className="h-auto"
                 />
@@ -40,7 +40,7 @@ export function Navbar() {
                 <Link 
                   key={link.href} 
                   href={link.href}
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-white font-[500] transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -49,7 +49,7 @@ export function Navbar() {
 
             {/* CTA Button and Hamburger - Right */}
             <div className="flex justify-end items-center">
-              <button className="hidden md:flex items-center gap-2 border border-white text-white px-5 py-3 rounded-full text-sm hover:bg-white hover:text-black transition-colors">
+              <button className="hidden md:flex items-center gap-2 border border-white text-white px-5 py-2 rounded-full text-sm hover:bg-white hover:text-black transition-colors">
                 Let's talk
               </button>
 

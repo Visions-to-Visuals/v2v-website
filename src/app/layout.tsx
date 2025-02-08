@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="overflow-x-hidden">
+    <html lang="en" className="overflow-x-hidden bg-black">
       <body className="font-tt-hoves antialiased overflow-x-hidden">
         {children}
       </body>

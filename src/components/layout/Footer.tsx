@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Button from '../components/button';
 
 export function Footer() {
   return (
@@ -15,16 +16,7 @@ export function Footer() {
               height={40}
               className="mb-4"
             />
-            <button className="flex items-center gap-2 text-black hover:text-gray-600 transition-colors md:mb-8 underline">
-              Book a discovery call
-              <Image 
-                src="/assets/diagonal-arrow-dark.svg"
-                alt="Arrow"
-                width={20}
-                height={20}
-                className="w-5 h-5"
-              />
-            </button>
+            <Button></Button>
             <p className="text-sm text-gray-500 mt-auto hidden md:block">
               © 2025 Visions to Visuals. All Rights Reserved.
             </p>
