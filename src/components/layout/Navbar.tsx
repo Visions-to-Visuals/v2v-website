@@ -19,8 +19,8 @@ export function Navbar() {
     <>
       <div className="bg-black" /> {/* Spacer for fixed navbar */}
       <nav className="fixed top-0 left-0 right-0 w-full bg-black text-white z-50">
-        <div className="max-w-7xl mx-auto px-4 py-4">
-          <div className="flex md:grid md:grid-cols-3 items-center justify-between">
+        <div className="max-w-7xl mx-auto mobile:px-8 mobile-s:px-5 py-4">
+          <div className="flex md:grid-cols-3 items-center justify-between">
             {/* Logo - Left */}
             <div className="flex-shrink-0">
               <Link href="/" className="flex-shrink-0">
@@ -35,7 +35,7 @@ export function Navbar() {
             </div>
 
             {/* Navigation Links - Center */}
-            <div className="hidden md:flex items-center justify-center gap-8">
+            <div className="hidden uiuxbreak:flex items-center justify-center gap-8">
               {navLinks.map((link) => (
                 <Link 
                   key={link.href} 
@@ -48,15 +48,15 @@ export function Navbar() {
             </div>
 
             {/* CTA Button and Hamburger - Right */}
-            <div className="flex justify-end items-center">
-              <button className="hidden md:flex items-center gap-2 border border-white text-white px-5 py-2 rounded-full text-sm hover:bg-white hover:text-black transition-colors">
+            <div className="flex justify-end items-center w-[190px]">
+              <button className="hidden uiuxbreak:flex items-center gap-2 border border-white text-white px-5 py-2 rounded-full text-sm hover:bg-white hover:text-black transition-colors">
                 Let's talk
               </button>
 
               {/* Hamburger Menu Button - Mobile */}
               <button 
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="md:hidden p-2"
+                className="uiuxbreak:hidden p-2"
                 aria-label="Toggle menu"
               >
                 <div className="w-6 h-0.5 bg-white mb-1.5"></div>
@@ -68,7 +68,7 @@ export function Navbar() {
 
           {/* Mobile Menu */}
           {isMenuOpen && (
-            <div className="md:hidden fixed left-0 right-0 top-[72px] bg-black border-t border-gray-800">
+            <div className="uiuxbreak:hidden fixed left-0 right-0 top-[65px] bg-black border-t border-gray-800">
               <div className="px-4 py-4 space-y-4">
                 {navLinks.map((link) => (
                   <Link 

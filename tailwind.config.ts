@@ -9,11 +9,15 @@ export default {
   theme: {
     extend: {
       screens: {
-        'break': '825px',
-        'mobile': '496px',
-        'uiuxbreak': '930px',
-        'h2break': '1135px',
-        'morestars': '1324px',
+        'mobile-s': '300px',
+        'mobile': '540px',
+        'tablet': '800px',
+        'uiuxbreak': '1024px',
+        'h2break': '1440px',
+
+        tablett: { max: "800px" },
+        laptop: { max: "1024px" },
+
       },
       colors: {
         white: '#FFFFFF',
@@ -37,14 +41,17 @@ export default {
         'p3': ['16px', { lineHeight: '140%', letterSpacing: '-1%', fontWeight: '500' }],
         'p4': ['14px', { lineHeight: '140%', letterSpacing: '-1%', fontWeight: '400' }],
         'h4': ['14px', { lineHeight: 'auto', letterSpacing: '0', fontWeight: '400' }],
-        'm-h1': ['32px', { lineHeight: '120%', letterSpacing: '-0.03em', fontWeight: '600' }],
-        'm-h2': ['28px', { lineHeight: 'auto', letterSpacing: '-0.03em', fontWeight: '600' }],
+        'mh1': ['36px', { lineHeight: '120%', letterSpacing: '-0.03em', fontWeight: '600' }],
+        'mh2': ['32px', { lineHeight: 'auto', letterSpacing: '-0.03em', fontWeight: '600' }],
         'm-h3': ['18px', { lineHeight: 'auto', letterSpacing: '-1%', fontWeight: '500' }],
         'm-p1': ['18px', { lineHeight: '160%', letterSpacing: '-1%', fontWeight: '400' }],
-        'm-p2': ['16px', { lineHeight: '160%', letterSpacing: '-1%', fontWeight: '400' }],
+        'mp2': ['16px', { lineHeight: '160%', letterSpacing: '-1%', fontWeight: '500' }],
         'm-p3': ['14px', { lineHeight: '140%', letterSpacing: '-1%', fontWeight: '500' }],
         'm-p4': ['12px', { lineHeight: '140%', letterSpacing: '-1%', fontWeight: '400' }],
         'm-h4': ['12px', { lineHeight: 'auto', letterSpacing: '0', fontWeight: '400' }],
+        'sh1': ['32px', { lineHeight: '120%', letterSpacing: '-0.03em', fontWeight: '600' }],
+        'sh2': ['28px', { lineHeight: '120%', letterSpacing: '-0.03em', fontWeight: '600' }],
+        'xsh1': ['32px', { lineHeight: '120%', letterSpacing: '-0.03em', fontWeight: '600' }],
       },
     },
   },

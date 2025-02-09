@@ -14,7 +14,7 @@ interface Project {
 
 function BeforeAfterToggle({ isAfter, onChange }: { isAfter: boolean; onChange: (isAfter: boolean) => void }) {
   return (
-    <div className="relative mt-4 md:mt-0 w-full md:w-[200px] h-[32px] rounded-full bg-black  border-white p-[2px]">
+    <div className="relative mt-3 mobile:mt-4 md:mt-0 w-full md:w-[200px] h-[32px] rounded-full bg-black  border-white p-[2px]">
       <div className="relative w-full h-full rounded-full overflow-hidden">
         <div 
           className={`absolute inset-0 w-1/2 h-full rounded-full transition-transform duration-300 ease-in-out ${
@@ -50,8 +50,8 @@ function ProjectCard({ project }: { project: Project }) {
   return (
     <div className="flex flex-col">
       {/* Header */}
-      <div className="flex justify-between items-center md:flex-row flex-col mb-3">
-        <h3 className="text-xl">{project.title}</h3>
+      <div className="flex justify-between items-center md:flex-row flex-col mb-2">
+        <h3 className="text-[18px] font-[500]">{project.title}</h3>
         <BeforeAfterToggle isAfter={isAfter} onChange={setIsAfter} />
       </div>
 
@@ -122,10 +122,10 @@ export function PortfolioSection() {
       visitUrl: "https://www.goldenstateponds.com/"
     },
     {
-      title: "ChalkWild",
+      title: "ChalkWild (Ecommerce)",
       date: "November 2024",
       status: "",
-      beforeImage: "/assets/before/ChalkWild.png",
+      beforeImage: "/assets/before/chalk-wild.png",
       afterImage: "/assets/after/ChalkWild.png",
       visitUrl: "https://chalkwild.com/"
     },
@@ -140,16 +140,16 @@ export function PortfolioSection() {
   ];
 
   return (
-    <section className="flex flex-col items-center justify-between px-8 w-full bg-black text-white pt-20 py-40">
+    <section className="flex flex-col items-center justify-between mobile:px-12 mobile-s:px-5 w-full bg-black text-white pt-20 mobile:py-40 py-32">
       <div className="max-w-[1200px] mx-auto w-full">
         {/* Header */}
         <div className="text-center mb-12">
-          <span className="text-[14px] text-[#FFD700] block">REAL CLIENTS WITH REAL SOLUTIONS</span>
-          <h2 className="text-m-h2 md:text-h2">See our latest projects</h2>
+          <span className="mobile:text-[14px] text-[13px] text-[#FFD700] block">REAL CLIENTS WITH REAL SOLUTIONS</span>
+          <h2 className="h2break:text-h2 mobile:text-mh2 mobile-s:text-sh2">See our latest projects</h2>
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 uiuxbreak:gap-12 mobile:gap-16 gap-12">
           {projects.map((project) => (
             <ProjectCard key={project.title} project={project} />
           ))}

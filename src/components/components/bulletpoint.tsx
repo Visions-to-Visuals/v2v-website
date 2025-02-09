@@ -6,7 +6,7 @@ interface BulletPointProps {
 
 export default function BulletPoint({ text }: BulletPointProps) {
   return (
-    <li className="text-p2 flex items-center gap-2">
+    <li className="tablet:text-p2 mobile-s:text-mp2 flex items-center gap-2">
       <Image 
         src="/assets/check.svg"
         alt="Check mark"

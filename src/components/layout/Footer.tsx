@@ -24,7 +24,7 @@ export function Footer() {
 
           {/* Resources Section */}
           <div className="min-w-[140px]">
-            <h3 className="font-bold mb-4">Resources</h3>
+            <h3 className="font-[500] mb-4">Resources</h3>
             <ul className="space-y-2">
               <li><a href="/services" className="text-gray-600 hover:text-black transition-colors">Our Services</a></li>
               <li><a href="/team" className="text-gray-600 hover:text-black transition-colors">Our Team</a></li>
@@ -35,7 +35,7 @@ export function Footer() {
 
           {/* Past Projects Section */}
           <div className="min-w-[200px]">
-            <h3 className="font-bold mb-4">Past Projects</h3>
+            <h3 className="font-[500] mb-4">Past Projects</h3>
             <ul className="space-y-2">
               <li><a href="#" className="text-gray-600 hover:text-black transition-colors">California Invention Convention</a></li>
               <li><a href="#" className="text-gray-600 hover:text-black transition-colors">Golden State Ponds</a></li>
@@ -46,7 +46,7 @@ export function Footer() {
 
           {/* Contact Section */}
           <div className="min-w-[140px]">
-            <h3 className="font-bold mb-4">Contact</h3>
+            <h3 className="font-[500] mb-4">Contact</h3>
             <ul className="space-y-2 mb-4">
               <li><a href="mailto:contact@visionstovisuals.com" className="text-gray-600 hover:text-black transition-colors flex items-center gap-2">
                 <Image 

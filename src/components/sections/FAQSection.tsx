@@ -1,5 +1,4 @@
 "use client"
-
 import { useState } from 'react'
 import Image from 'next/image'
 
@@ -15,24 +14,24 @@ function FAQItem({ faq }: { faq: FAQ }) {
     <div className={`border rounded-lg overflow-hidden mb-4 ${isOpen ? 'border-[#e47226]' : 'border-gray-200'}`}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between p-6 text-left"
+        className="w-full flex items-center justify-between mobile:py-6 mobile:px-6 px-4 py-5 text-left"
       >
-        <span className="text-[16px] font-[500] max-w-[80%]">{faq.question}</span>
+        <span className="text-[16px] leading-[130%] font-[500] max-w-[85%]">{faq.question}</span>
         <Image 
           src="/assets/faq-dropdown.svg"
           alt="Dropdown arrow"
           width={10}
           height={16}
-          className={`transform transition-transform duration-200 ${isOpen ? 'rotate-90' : ''}`}
+          className={`transform transition-transform duration-[400ms] ${isOpen ? 'rotate-90' : ''}`}
         />
       </button>
       
       <div 
-        className={`overflow-hidden transition-all duration-200 ${
+        className={`overflow-hidden transition-all duration-[300ms] ${
           isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <p className="px-6 pt-0 pb-6 text-[16px] text-[#3D3D3D]">{faq.answer}</p>
+        <p className="mobile:px-6 px-4 pt-0 pb-6 text-[16px] text-[#3D3D3D]">{faq.answer}</p>
       </div>
     </div>
   );
@@ -63,8 +62,8 @@ export function FAQSection() {
   ];
 
   return (
-    <section className="flex flex-col items-center w-full bg-white text-black pt-20 pb-32">
-      <div className="max-w-[800px] mx-auto px-8 w-full">
+    <section className="flex flex-col items-center w-full bg-white text-black mobile:pt-20 pt-12 mobile:pb-32 pb-20">
+      <div className="max-w-[800px] mx-auto mobile:px-8 px-5 w-full">
         {/* Section Title */}
         <p className="mb-6 text-[#3D3D3D] text-center text-[18px]">Frequently Asked Questions</p>
 
