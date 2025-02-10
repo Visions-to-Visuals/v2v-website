@@ -31,7 +31,7 @@ export function TeamSection() {
   ];
 
   return (
-    <section className="flex flex-col items-center w-full bg-black text-white py-12 mobile:px-12 mobile-s:px-5 md:py-20 mobile-s:py-12">
+    <section id='team' className="flex flex-col items-center w-full bg-black text-white pb-12 mobile:px-12 mobile-s:px-5 md:py-20 mobile-s:py-12 tablet:pt-16">
       <div className="max-w-[1000px] mx-auto w-full">
         {/* Header */}
         <div className="text-center mb-8">

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
+import Cal, { getCalApi } from "@calcom/embed-react";
 
 interface Step {
   number: number;
@@ -14,6 +15,29 @@ export function CallToAction() {
     { number: 2, title: "Evaluate your pain-points" },
     { number: 3, title: "Discuss pricing and timeline" }
   ];
+
+  // useEffect(()=>{
+  //   (async function () {
+  //   const cal = await getCalApi({"namespace":"discovery"});
+  //   cal("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+  //   })();
+  // }, [])
+
+  useEffect(()=>{
+	  (async function () {
+		const cal = await getCalApi({"namespace":"discovery"});
+    cal("ui", {
+      theme: "dark",
+      cssVarsPerTheme: {
+        light: { "cal-brand": "#FFE45B" },
+        dark: { "cal-brand": "#FFE45B" }, 
+      },
+      hideEventTypeDetails: false,
+      layout: "month_view",
+    });
+	  })();
+	}, [])
+  
 
   const [starSizes, setStarSizes] = useState([24, 24, 24, 24]); // Default sizes
 
@@ -28,7 +52,7 @@ export function CallToAction() {
   }, []); // Empty dependency array means this runs once on mount
 
   return (
-    <section className="flex flex-col items-center w-full bg-white text-black pb-20 mobile:pt-32 pt-24 relative">
+    <section className="flex flex-col items-center w-full bg-white text-black pb-20 mobile:pt-32 pt-24 relative" id="calendar">
       <style jsx>{`
         @keyframes float {
           0% {
@@ -78,25 +102,19 @@ export function CallToAction() {
           <span className="text-[#EA3D25] mobile:text-[14px] text-[13px] mb-1 mobile:mb-0">IT'S ABOUT WORKING WITH THE RIGHT PEOPLE</span>
 
           {/* Main Title */}
-          <h2 className="h2break:text-h2 mobile:text-mh2 mobile-s:text-sh2 mb-16 md:mb-24">Ready to level up your business?</h2>
+          <h2 className="h2break:text-h2 mobile:text-mh2 mobile-s:text-sh2 mb-12 md:mb-20">Ready to level up your business?</h2>
 
-          {/* CTA Button */}
-          <button className="flex font-[500] items-center gap-2 bg-black text-white px-6 py-3 rounded-full mb-16 md:mb-32">
-            Yes, let's talk business
-            <Image 
-              src="/assets/arrow-white.svg"
-              alt="Arrow"
-              width={20}
-              height={20}
-              className="w-5 h-5"
-            />
-          </button>
+          <Cal namespace="discovery"
+	        calLink="visions2visuals/discovery"
+	        style={{width:"100%",height:"100%",overflow:"scroll"}}
+	        config={{"layout":"month_view"}}
+	        />
 
           {/* Discovery Call Info */}
-          <p className="mb-8 text-[#3D3D3D] mobile:text-[18px] text-[16px] leading-[130%]">Here's what to expect in our 45-minute discovery call:</p>
+          <p className="mb-8 text-[#3D3D3D] mobile:text-[18px] text-[16px] leading-[130%] pt-4">Here's what to expect in our free 30-minute discovery call:</p>
 
           {/* Steps */}
-          <div className="flex justify-center w-full">
+          <div className="flex justify-center w-full mb-16">
             <div className="flex flex-col uiuxbreak:flex-row gap-6 uiuxbreak:gap-16">
               {steps.map((step) => (
                 <div key={step.number} className="flex items-center mobile:gap-2 gap-3">

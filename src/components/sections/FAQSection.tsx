@@ -11,7 +11,7 @@ function FAQItem({ faq }: { faq: FAQ }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className={`border rounded-lg overflow-hidden mb-4 ${isOpen ? 'border-[#e47226]' : 'border-gray-200'}`}>
+    <div className={`border rounded-lg overflow-hidden mb-4 ${isOpen ? 'border-[#CCCCCC]' : 'border-gray-200'}`}>
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex items-center justify-between mobile:py-6 mobile:px-6 px-4 py-5 text-left"
@@ -49,7 +49,7 @@ export function FAQSection() {
     },
     {
       question: "How much do you charge for a website?",
-      answer: "Our pricing varies depending on the complexity and scope of the project. That being said, our pricing starts at $1500 for smaller websites, and starts at $3000 for larger complex sites. For more details on pricing, contact us to discuss the right solution for your specific project."
+      answer: "Our pricing varies depending on the complexity and scope of the project. That being said, our pricing starts at $1000 for smaller websites, and starts at $2000 for larger complex sites. For more details on pricing, contact us to discuss the right solution for your specific project."
     },
     {
       question: "Do I have to pay the full price of the website upfront?",
@@ -62,7 +62,7 @@ export function FAQSection() {
   ];
 
   return (
-    <section className="flex flex-col items-center w-full bg-white text-black mobile:pt-20 pt-12 mobile:pb-32 pb-20">
+    <section id="faq" className="flex flex-col items-center w-full bg-white text-black pt-12 mobile:pt-4 mobile:pb-32 pb-20">
       <div className="max-w-[800px] mx-auto mobile:px-8 px-5 w-full">
         {/* Section Title */}
         <p className="mb-6 text-[#3D3D3D] text-center text-[18px]">Frequently Asked Questions</p>

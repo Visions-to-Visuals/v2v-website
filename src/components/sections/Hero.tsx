@@ -3,7 +3,7 @@ import Button from '../components/button'
 
 export function Hero() {
   return (
-    <section className="uiuxbreak:mt-[4rem] mobile-s:mt-[3rem] relative flex flex-col items-center w-full bg-black text-white overflow-hidden">
+    <section className="uiuxbreak:pt-[4rem] mobile-s:pt-[3rem] relative flex flex-col items-center w-full bg-black text-white overflow-hidden" id='home'>
       <div className="max-w-7xl mx-auto mobile:px-12 mobile-s:px-5  w-full mobile:py-[3.5rem] py-[3rem]">
         <div className="flex flex-col items-center tablet:text-center text-left">
           <span className="mobile:text-[14px] text-[13px] font-[400] text-[#FFD700] mb-1 mobile-s:w-[100%]">TRUSTED DESIGN AND DEVELOPMENT AGENCY</span>
@@ -22,7 +22,7 @@ export function Hero() {
             alt="Orange Circle"
             width={1000}
             height={1000}
-            className='absolute w-full h-auto top-[-120px] right-[300px]'
+            className='absolute w-full h-auto top-[-120px] right-[300px] pointer-events-none select-none'
             priority
             >
             </Image>
@@ -32,7 +32,7 @@ export function Hero() {
             alt="Yellow Circle"
             width={1000}
             height={1000}
-            className='absolute w-full h-auto top-[-180px] left-[300px]'
+            className='absolute w-full h-auto top-[-180px] left-[300px] pointer-events-none select-none'
             priority
             >
             </Image>
