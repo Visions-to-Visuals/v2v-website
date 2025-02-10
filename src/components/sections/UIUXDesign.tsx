@@ -38,7 +38,7 @@ export function UIUXDesign() {
         {/* Right Column */}
         <div className="lg:w-1/2 flex justify-center">
           <Image 
-            src="/assets/ui-examples.png"
+            src="/assets/ui-examples.webp"
             alt="Collection of UI/UX design examples showing various interfaces and mockups"
             width={600}
             height={600}

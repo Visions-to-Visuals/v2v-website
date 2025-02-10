@@ -49,7 +49,7 @@ export function Hero() {
 
           <div className="relative w-full max-w-6xl mx-auto mobile:mt-[6rem] mobile-s:mt-[4rem] z-10 pointer-events-none select-none">
             <Image 
-              src="/assets/best-work.png" 
+              src="/assets/best-work.webp" 
               alt="Our best work showcase"
               width={1200}
               height={600}

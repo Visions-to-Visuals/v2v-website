@@ -36,7 +36,7 @@ export function WebsiteDevelopment() {
         {/* Right Column */}
         <div className="lg:w-1/2 flex justify-center">
           <Image 
-            src="/assets/development-examples.png"
+            src="/assets/development-examples.webp"
             alt="Website development examples showing performance metrics and responsive design"
             width={600}
             height={600}
