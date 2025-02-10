@@ -15,7 +15,6 @@ export default {
         'uiuxbreak': '1024px',
         'h2break': '1440px',
 
-        tablett: { max: "800px" },
         laptop: { max: "1024px" },
 
       },

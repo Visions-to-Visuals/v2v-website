@@ -1,8 +1,11 @@
 import Image from 'next/image'
 import Button from '../components/button'
+import Squares from '../components/squares'
+
 export function Hero() {
   return (
     <section className="uiuxbreak:pt-[4rem] mobile-s:pt-[3rem] relative flex flex-col items-center w-full bg-black text-white overflow-hidden" id='home'>
+      <Squares />
       <div className="max-w-7xl mx-auto mobile:px-12 mobile-s:px-5  w-full mobile:py-[3.5rem] py-[3rem]">
         <div className="flex flex-col items-center tablet:text-center text-left">
           <span className="mobile:text-[14px] text-[13px] font-[400] text-[#FFD700] mb-1 mobile-s:w-[100%]">TRUSTED DESIGN AND DEVELOPMENT AGENCY</span>
