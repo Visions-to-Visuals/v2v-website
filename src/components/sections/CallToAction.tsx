@@ -52,7 +52,10 @@ export function CallToAction() {
   }, []); // Empty dependency array means this runs once on mount
 
   return (
-    <section className="flex flex-col items-center w-full bg-white text-black pb-20 mobile:pt-32 pt-24 relative" id="calendar">
+    <section className="flex flex-col items-center w-full text-black pb-20 mobile:pt-32 pt-24 relative" id="calendar">
+      {/* Background layer */}
+      <div className="absolute inset-0 bg-white -z-10" />
+
       <style jsx>{`
         @keyframes float {
           0% {
@@ -81,7 +84,6 @@ export function CallToAction() {
           animation-delay: 0.3s;
         }
       `}</style>
-
       {/* Decorative Stars */}
       <div className="absolute sm:top-16 lg:top-48 left-[7%] lg:left-[15%] star-float-1 uiuxbreak:inline hidden">
         <Image src="/assets/Star.svg" alt="" width={starSizes[0]} height={starSizes[0]} />
@@ -96,7 +98,7 @@ export function CallToAction() {
         <Image src="/assets/Star.svg" alt="" width={starSizes[3]} height={starSizes[3]} />
       </div>
 
-      <div className="max-w-7xl mx-auto px-5 w-full relative">
+      <div className="max-w-7xl mx-auto px-5 w-full relative z-10">
         <div className="flex flex-col items-center text-center">
           {/* Top Tag */}
           <span className="text-[#EA3D25] mobile:text-[14px] text-[13px] mb-1 mobile:mb-0">IT'S ABOUT WORKING WITH THE RIGHT PEOPLE</span>

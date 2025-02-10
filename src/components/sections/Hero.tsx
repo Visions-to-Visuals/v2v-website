@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Button from '../components/button'
-
 export function Hero() {
   return (
     <section className="uiuxbreak:pt-[4rem] mobile-s:pt-[3rem] relative flex flex-col items-center w-full bg-black text-white overflow-hidden" id='home'>
@@ -58,6 +57,7 @@ export function Hero() {
           </div>
         </div>
       </div>
+      
     </section>
   )
 } 

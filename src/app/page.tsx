@@ -7,7 +7,7 @@ import { PortfolioSection } from '@/components/sections/PortfolioSection'
 import { CallToAction } from '@/components/sections/CallToAction'
 import { FAQSection } from '@/components/sections/FAQSection'
 import { Footer } from '@/components/layout/Footer'
-
+import Comet from '@/components/components/comet'
 export default function Home() {
   return (
     <>
@@ -17,6 +17,7 @@ export default function Home() {
       <WebsiteDevelopment />
       <TeamSection />
       <PortfolioSection />
+      <Comet />
       <CallToAction />
       <FAQSection />
       <Footer />

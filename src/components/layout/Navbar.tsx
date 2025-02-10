@@ -29,7 +29,7 @@ export function Navbar() {
                   alt="Visions to Visuals"
                   width={200}
                   height={50}
-                  className="h-auto"
+                  className="h-auto mobile:w-[200px] mobile-s:w-[150px]"
                 />
               </Link>
             </div>
@@ -52,12 +52,12 @@ export function Navbar() {
               <Link 
               href="#calendar"
               rel="noopener noreferrer"
-              className="hidden uiuxbreak:flex items-center gap-2 border border-white text-white px-5 py-2 rounded-full text-sm hover:bg-white hover:text-black ease-in-out duration-300">
+              className="uiuxbreak:flex items-center gap-2 border border-white text-white px-5 py-2 rounded-full text-sm hover:bg-white hover:text-black ease-in-out duration-300">
                 Let's talk
               </Link>
 
               {/* Hamburger Menu Button - Mobile */}
-              <button 
+              {/* <button 
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="uiuxbreak:hidden p-2"
                 aria-label="Toggle menu"
@@ -65,7 +65,7 @@ export function Navbar() {
                 <div className="w-6 h-0.5 bg-white mb-1.5"></div>
                 <div className="w-6 h-0.5 bg-white mb-1.5"></div>
                 <div className="w-6 h-0.5 bg-white"></div>
-              </button>
+              </button> */}
             </div>
           </div>
 

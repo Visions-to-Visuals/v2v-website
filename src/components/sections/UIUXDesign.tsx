@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Button from '../components/button';
 import BulletPoint from '../components/bulletpoint';
 
+
 export function UIUXDesign() {
   return (
     <section id='design' className="flex items-center justify-between mobile:px-12 mobile-s:px-5 text-white tablet:py-28 mobile:pt-20 mobile:pb-12 mobile-s:py-12">
