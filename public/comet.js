@@ -1,4 +1,3 @@
-// Initialize canvas when it's available
 function initCanvas() {
     const canvas1 = document.getElementById("canvas1");
     if (!canvas1) return;
@@ -6,21 +5,11 @@ function initCanvas() {
     const ctx1 = canvas1.getContext("2d");
     if (!ctx1) return;
 
-    function updateCanvasSize() {
-        canvas1.width = window.innerWidth;
-        canvas1.height = window.innerHeight;
-    }
-
-    // Initial size setup
-    updateCanvasSize();
-
-    // Handle resize
-    window.addEventListener('resize', updateCanvasSize);
-
     const STAR_DENSITY = 5 * 10e7;
     const GRAVITATIONAL_CONSTANT = 2e-10;
   
-    const STAR_COUNT = Math.floor(window.innerWidth / 60);
+    const getStarCount = () => Math.floor(window.innerWidth / 40);
+    let STAR_COUNT = getStarCount();
     const MAX_STAR_RADIUS = 10;
     const MIN_STAR_RADIUS = 1;
     const MAX_STAR_VELOCITY = 1.25;
@@ -29,10 +18,11 @@ function initCanvas() {
     const MAX_COMET_RADIUS = 4;
     const COMET_FRICTION = 0.995;
     const TAIL_LENGTH_FACTOR = 8;
+    const STAR_RADIUS_CAP = 15;
     const TAIL_FALLOFF_SPEED = 0.15;
     const maxTailLength = 80;
-    const TRAIL_POINTS = 12; // Number of points in the trail
-    const TRAIL_OPACITY_DECAY = 0.92; // How quickly the trail fades
+    const TRAIL_POINTS = 12;
+    const TRAIL_OPACITY_DECAY = 0.92;
 
     let stars = [];
     let top = 0;
@@ -72,6 +62,10 @@ function initCanvas() {
   
       if (star1.radius >= MAX_STAR_RADIUS / 2) {
         star1.isFront = false;
+      }
+
+      if (star1.radius >= STAR_RADIUS_CAP) {
+        star1.radius = STAR_RADIUS_CAP;
       }
   
       stars = stars.filter(star => star !== smallerStar);
@@ -261,18 +255,47 @@ function initCanvas() {
     }
   
     function handleResize() {
-      canvas1.width = window.innerWidth;
-      canvas1.height = window.innerHeight;
+        const oldHeight = canvas1.height;
+        const oldWidth = canvas1.width;
+        
+        // Update star count based on new width
+        STAR_COUNT = getStarCount();
+        
+        // Adjust number of stars if needed
+        while (stars.length < STAR_COUNT) {
+            addNewStar();
+        }
+        while (stars.length > STAR_COUNT) {
+            stars.pop();
+        }
+
+        // Adjust star positions if canvas size changed significantly
+        if (Math.abs(oldHeight - canvas1.height) > 50 || Math.abs(oldWidth - canvas1.width) > 50) {
+            stars.forEach(star => {
+                // Keep stars in relative positions
+                star.x = (star.x / oldWidth) * canvas1.width;
+                star.y = (star.y / oldHeight) * canvas1.height;
+                
+                // Clear trails as they might be invalid in new dimensions
+                star.trail = [];
+                star.trailOpacities = [];
+            });
+        }
     }
   
-    function handleScroll() {
-      top = window.scrollY || window.pageYOffset;
-      canvas1.style.top = `${top}px`;
-    }
-  
+    // Add resize listener
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('scroll', handleResize);
+
     // Start animation
     createStars();
     animate();
+
+    // Return cleanup function
+    return () => {
+        window.removeEventListener('resize', handleResize);
+        window.removeEventListener('scroll', handleResize);
+    };
 }
 
 // Try to initialize immediately if document is already loaded

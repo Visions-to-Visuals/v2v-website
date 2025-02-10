@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export function Footer() {
   return (
-    <footer className="bg-white text-black border-t border-gray-200">
+    <footer id='footer' className="bg-white text-black border-t border-gray-200 relative z-10">
       <div className="max-w-7xl mx-auto px-8 py-16">
         <div className="flex flex-col tablet:flex-row tablet:justify-between gap-8">
           {/* Logo Section */}

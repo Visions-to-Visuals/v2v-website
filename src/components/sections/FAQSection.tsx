@@ -11,7 +11,7 @@ function FAQItem({ faq }: { faq: FAQ }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className={`border rounded-lg overflow-hidden mb-4 ${isOpen ? 'border-[#CCCCCC]' : 'border-gray-200'}`}>
+    <div className={`border rounded-lg overflow-hidden mb-4 bg-white ${isOpen ? 'border-[#CCCCCC]' : 'border-gray-200'}`}>
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex items-center justify-between mobile:py-6 mobile:px-6 px-4 py-5 text-left"
@@ -63,7 +63,7 @@ export function FAQSection() {
 
   return (
     <section id="faq" className="flex flex-col items-center w-full bg-white text-black pt-12 mobile:pt-4 mobile:pb-32 pb-20">
-      <div className="max-w-[800px] mx-auto mobile:px-8 px-5 w-full">
+      <div className="max-w-[800px] mx-auto mobile:px-8 px-5 w-full z-10">
         {/* Section Title */}
         <p className="mb-6 text-[#3D3D3D] text-center text-[18px]">Frequently Asked Questions</p>
 
