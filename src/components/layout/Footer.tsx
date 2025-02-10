@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import Button from '../components/button';
 import Link from 'next/link';
 
 export function Footer() {
@@ -60,7 +59,7 @@ export function Footer() {
               <li><a target='_blank' href="#" className="text-gray-600 hover:text-black transition-colors">CA Invention Convention</a></li>
               <li><a target='_blank' href="https://www.goldenstateponds.com/" className="text-gray-600 hover:text-black transition-colors">Golden State Ponds</a></li>
               <li><a target='_blank' href="https://chalkwild.com/" className="text-gray-600 hover:text-black transition-colors">ChalkWild</a></li>
-              <li><a target='_blank' href="https://www.allpeoplespc.org/" className="text-gray-600 hover:text-black transition-colors">All People's Presbyterian</a></li>
+              <li><a target='_blank' href="https://www.allpeoplespc.org/" className="text-gray-600 hover:text-black transition-colors">All People&apos;s Presbyterian</a></li>
             </ul>
           </div>
 
@@ -99,6 +98,10 @@ export function Footer() {
         {/* Mobile copyright notice */}
         <p className="text-sm text-gray-500 pt-8 md:hidden">
           © 2025 Visions to Visuals. All Rights Reserved.
+        </p>
+
+        <p className="text-white text-sm">
+            We&apos;re not just another web development company - we&apos;re your partner in digital success.
         </p>
       </div>
     </footer>

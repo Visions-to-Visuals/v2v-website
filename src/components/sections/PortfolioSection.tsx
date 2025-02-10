@@ -140,7 +140,7 @@ export function PortfolioSection() {
   ];
 
   return (
-    <section id='projects' className="flex flex-col items-center justify-between mobile:px-12 mobile-s:px-5 w-full bg-black text-white pt-20 mobile-s:py-28">
+    <section id='projects' className="flex flex-col items-center justify-between mobile:px-12 mobile-s:px-5 w-full bg-black text-white pt-20 mobile-s:py-28 mb-10">
       <div className="max-w-[1200px] mx-auto w-full">
         {/* Header */}
         <div className="text-center mb-12">

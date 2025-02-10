@@ -53,7 +53,7 @@ export function Navbar() {
               href="#calendar"
               rel="noopener noreferrer"
               className="uiuxbreak:flex items-center gap-2 border border-white text-white px-5 py-2 rounded-full text-sm hover:bg-white hover:text-black ease-in-out duration-300">
-                Let's talk
+                Let&apos;s talk
               </Link>
 
               {/* Hamburger Menu Button - Mobile */}
@@ -87,7 +87,7 @@ export function Navbar() {
                 href="#calendar"
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-center gap-2 border border-white text-white px-5 py-3 rounded-full text-sm hover:bg-white hover:text-black transition-colors">
-                  Let's talk
+                  Let&apos;s talk
                 </Link>
               </div>
             </div>

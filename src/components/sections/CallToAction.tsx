@@ -101,19 +101,15 @@ export function CallToAction() {
       <div className="max-w-7xl mx-auto px-5 w-full relative z-10">
         <div className="flex flex-col items-center text-center">
           {/* Top Tag */}
-          <span className="text-[#EA3D25] mobile:text-[14px] text-[13px] mb-1 mobile:mb-0">IT'S ABOUT WORKING WITH THE RIGHT PEOPLE</span>
+          <span className="text-[#EA3D25] mobile:text-[14px] text-[13px] mb-1 mobile:mb-0">IT&apos;S ABOUT WORKING WITH THE RIGHT PEOPLE</span>
 
           {/* Main Title */}
-          <h2 className="h2break:text-h2 mobile:text-mh2 mobile-s:text-sh2 mb-12 md:mb-20">Ready to level up your business?</h2>
+          <h2 className="h2break:text-h2 mobile:text-mh2 mobile-s:text-sh2 mb-4 md:mb-10">Ready to level up your business?</h2>
 
-          <Cal namespace="discovery"
-	        calLink="visions2visuals/discovery"
-	        style={{width:"100%",height:"100%",overflow:"scroll"}}
-	        config={{"layout":"month_view"}}
-	        />
 
           {/* Discovery Call Info */}
-          <p className="mb-8 text-[#3D3D3D] mobile:text-[18px] text-[16px] leading-[130%] mobile:pt-4 pt-8">Here's what to expect in our free 30-minute discovery call:</p>
+          {/* Discovery Call Info */}
+          <p className="mb-8 text-[#3D3D3D] mobile:text-[18px] text-[16px] leading-[130%] mobile:pt-4 pt-8">Here&apos;s what to expect in our free 30-minute discovery call:</p>
 
           {/* Steps */}
           <div className="flex justify-center w-full mb-16">
@@ -128,6 +124,14 @@ export function CallToAction() {
               ))}
             </div>
           </div>
+
+          <Cal namespace="discovery"
+	        calLink="visions2visuals/discovery"
+	        style={{width:"100%",height:"100%",overflow:"scroll"}}
+	        config={{"layout":"month_view"}}
+	        />
+
+          
         </div>
       </div>
     </section>

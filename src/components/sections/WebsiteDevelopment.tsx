@@ -14,7 +14,7 @@ export function WebsiteDevelopment() {
           </div>
           
           <p className="uiuxbreak:text-lg text-gray-300 tablet:text-[18px] mobile-s:text-[16px]">
-            By optimizing the speed and functionality, we enhance user engagement and retention to contribute to your business's success. No matter the complexity of the website, we find the best solution to keep you and your visitors happy.
+            By optimizing the speed and functionality, we enhance user engagement and retention to contribute to your business&apos;s success. No matter the complexity of the website, we find the best solution to keep you and your visitors happy.
           </p>
           
           <ul className="flex uiuxbreak:flex-col gap-4 text-white mt-2 mb-8 tablet:flex-row mobile-s:flex-col laptop:justify-between">

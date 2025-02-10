@@ -14,7 +14,7 @@ export default function Button() {
       px-6 py-3 rounded-full
       hover:bg-gray-100 hover:gap-5
       transition-all duration-300
-      text-nowrap"
+      text-nowrap z-10"
       >
       Book a discovery call
       <Image 
