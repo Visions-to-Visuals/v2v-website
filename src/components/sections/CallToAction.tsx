@@ -111,7 +111,7 @@ export function CallToAction() {
 	        />
 
           {/* Discovery Call Info */}
-          <p className="mb-8 text-[#3D3D3D] mobile:text-[18px] text-[16px] leading-[130%] pt-4">Here's what to expect in our free 30-minute discovery call:</p>
+          <p className="mb-8 text-[#3D3D3D] mobile:text-[18px] text-[16px] leading-[130%] mobile:pt-4 pt-8">Here's what to expect in our free 30-minute discovery call:</p>
 
           {/* Steps */}
           <div className="flex justify-center w-full mb-16">

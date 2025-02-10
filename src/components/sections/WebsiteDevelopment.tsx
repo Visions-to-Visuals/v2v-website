@@ -4,7 +4,7 @@ import BulletPoint from '../components/bulletpoint'
 
 export function WebsiteDevelopment() {
   return (
-    <section id='develop' className="flex items-center justify-between mobile:px-12 mobile-s:px-5 text-white tablet:pb-28 tablet:pt-20 mobile-s:py-12">
+    <section id='develop' className="flex items-center justify-between mobile:px-12 mobile-s:px-5 text-white tablet:py-20 mobile-s:py-12">
       <div className="flex flex-col uiuxbreak:flex-row-reverse max-w-[1200px] mx-auto gap-12 justify-between">
         {/* Left Column */}
         <div className="flex flex-col gap-4 uiuxbreak:w-2/5">

@@ -49,9 +49,12 @@ export function Navbar() {
 
             {/* CTA Button and Hamburger - Right */}
             <div className="flex justify-end items-center w-[190px]">
-              <button className="hidden uiuxbreak:flex items-center gap-2 border border-white text-white px-5 py-2 rounded-full text-sm hover:bg-white hover:text-black transition-colors">
+              <Link 
+              href="#calendar"
+              rel="noopener noreferrer"
+              className="hidden uiuxbreak:flex items-center gap-2 border border-white text-white px-5 py-2 rounded-full text-sm hover:bg-white hover:text-black ease-in-out duration-300">
                 Let's talk
-              </button>
+              </Link>
 
               {/* Hamburger Menu Button - Mobile */}
               <button 
@@ -80,9 +83,12 @@ export function Navbar() {
                     {link.label}
                   </Link>
                 ))}
-                <button className="w-full flex items-center justify-center gap-2 border border-white text-white px-5 py-3 rounded-full text-sm hover:bg-white hover:text-black transition-colors">
+                <Link 
+                href="#calendar"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-center gap-2 border border-white text-white px-5 py-3 rounded-full text-sm hover:bg-white hover:text-black transition-colors">
                   Let's talk
-                </button>
+                </Link>
               </div>
             </div>
           )}
