@@ -13,19 +13,19 @@ export function TeamSection() {
     {
       name: "Adrean Cajigas",
       role: "Lead Designer",
-      image: "/assets/employee-1.png",
+      image: "/assets/employee-1.webp",
       linkedIn: "https://www.linkedin.com/in/adrean-cajigas/"
     },
     {
       name: "Benjamin Schoolland",
       role: "Full-stack Developer",
-      image: "/assets/employee-2.png",
+      image: "/assets/employee-2.webp",
       linkedIn: "https://www.linkedin.com/in/benjamin-schoolland-907455254/"
     },
     {
       name: "Kirill Kovalenko",
       role: "Client Specialist",
-      image: "/assets/employee-3.png",
+      image: "/assets/employee-3.webp",
       linkedIn: "https://www.linkedin.com/in/benjamin-schoolland-907455254/"
     }
   ];

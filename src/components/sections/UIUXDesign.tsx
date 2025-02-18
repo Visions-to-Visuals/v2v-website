@@ -5,7 +5,7 @@ import BulletPoint from '../components/bulletpoint';
 
 export function UIUXDesign() {
   return (
-    <section id='design' className="flex items-center justify-between mobile:px-12 mobile-s:px-5 text-white tablet:py-28 mobile:pt-20 mobile:pb-12 mobile-s:py-12">
+    <section id='design' className="flex items-center justify-between mobile:px-12 mobile-s:px-5 text-white tablet:py-28 mobile:pt-20 mobile:pb-0 mobile-s:py-12">
       <div className="flex flex-col uiuxbreak:flex-row max-w-[1200px] mx-auto gap-12 justify-between">
         {/* Left Column */}
         <div className="flex flex-col gap-4 uiuxbreak:w-2/5">
@@ -38,7 +38,7 @@ export function UIUXDesign() {
         {/* Right Column */}
         <div className="lg:w-1/2 flex justify-center">
           <Image 
-            src="/assets/ui-examples.png"
+            src="/assets/ui-examples.webp"
             alt="Collection of UI/UX design examples showing various interfaces and mockups"
             width={600}
             height={600}
