@@ -29,7 +29,7 @@ export default {
         'light-grey': '#CCCCCC',
       },
       fontFamily: {
-        'tt-hoves': ['TT Hoves', 'sans-serif'],
+        'aspekta': ['Aspekta', 'sans-serif'],
       },
       fontSize: {
         'h1': ['48px', { lineHeight: '110%', letterSpacing: '-0.04em', fontWeight: '600' }],

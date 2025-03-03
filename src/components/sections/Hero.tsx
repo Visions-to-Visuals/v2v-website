@@ -19,7 +19,7 @@ export function Hero() {
             <span className="bg-gradient-to-r from-[#EC512B] to-[#F58F49] text-transparent bg-clip-text">even better</span>
             
             <Image
-            src="/assets/orange-circle.png"
+            src="/assets/orange-circle.webp"
             alt="Orange Circle"
             width={1000}
             height={1000}
@@ -29,7 +29,7 @@ export function Hero() {
             </Image>
 
             <Image
-            src="/assets/yellow-circle.png"
+            src="/assets/yellow-circle.webp"
             alt="Yellow Circle"
             width={1000}
             height={1000}

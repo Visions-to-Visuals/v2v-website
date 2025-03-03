@@ -16,13 +16,6 @@ export function CallToAction() {
     { number: 3, title: "Discuss pricing and timeline" }
   ];
 
-  // useEffect(()=>{
-  //   (async function () {
-  //   const cal = await getCalApi({"namespace":"discovery"});
-  //   cal("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-  //   })();
-  // }, [])
-
   useEffect(()=>{
 	  (async function () {
 		const cal = await getCalApi({"namespace":"discovery"});

@@ -1,30 +1,30 @@
 @font-face {
-  font-family: 'TT Hoves';
-  src: url('/fonts/TT Hoves Regular.otf') format('opentype');
+  font-family: 'Aspekta';
+  src: url('/fonts/Aspekta400.ttf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'TT Hoves';
-  src: url('/fonts/TT Hoves Medium.otf') format('opentype');
+  font-family: 'Aspekta';
+  src: url('/fonts/Aspekta500.ttf') format('opentype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'TT Hoves';
-  src: url('/fonts/TT Hoves DemiBold.otf') format('opentype');
+  font-family: 'Aspekta';
+  src: url('/fonts/Aspekta600.ttf') format('opentype');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'TT Hoves';
-  src: url('/fonts/TT Hoves Bold.otf') format('opentype');
+  font-family: 'Aspekta';
+  src: url('/fonts/Aspekta700.ttf') format('opentype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -44,7 +44,7 @@ html {
   }
   
   body {
-    @apply font-tt-hoves antialiased;
+    @apply font-aspekta antialiased;
   }
 
   h1 {
