@@ -8,7 +8,7 @@ function initCanvas() {
     const STAR_DENSITY = 5 * 10e7;
     const GRAVITATIONAL_CONSTANT = 2e-10;
   
-    const getStarCount = () => Math.floor(window.innerWidth / 40);
+    const getStarCount = () => Math.floor(window.innerWidth / 35);
     let STAR_COUNT = getStarCount();
     const MAX_STAR_RADIUS = 10;
     const MIN_STAR_RADIUS = 1;
@@ -108,7 +108,7 @@ function initCanvas() {
       stars.push({
         x,
         y,
-        radius: randomLow(MIN_STAR_RADIUS, MAX_STAR_RADIUS),
+        radius: Math.max(randomLow(MIN_STAR_RADIUS, MAX_STAR_RADIUS), randomLow(MIN_STAR_RADIUS, MAX_STAR_RADIUS)),
         vx,
         vy,
         tailLength: 0,
