@@ -26,7 +26,7 @@ export function TeamSection() {
       name: "Kirill Kovalenko",
       role: "Client Specialist",
       image: "/assets/employee-3.webp",
-      linkedIn: "https://www.linkedin.com/in/benjamin-schoolland-907455254/"
+      linkedIn: "https://www.linkedin.com/in/kirill-kovalenko1/"
     }
   ];
 
