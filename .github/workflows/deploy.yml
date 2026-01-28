@@ -5,9 +5,6 @@
   jobs:
     deploy:
       runs-on: ubuntu-latest
-      env:
-        ACTIONS_RUNNER_DEBUG: true
-        ACTIONS_STEP_DEBUG: true
       steps:
         - name: Checkout code
           uses: actions/checkout@v2
@@ -24,4 +21,3 @@
               npm i
               npm run build
               pm2 restart v2v-website
-# Wed Jan 28 08:51:39 AM PST 2026
