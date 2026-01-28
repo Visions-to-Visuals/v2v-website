@@ -56,7 +56,7 @@ export function Footer() {
           <div className="min-w-[120px]">
             <h3 className="font-[500] mb-4 leading-[100%]">Past Projects</h3>
             <ul className="space-y-2">
-              <li><a target='_blank' href="#" className="text-gray-600 hover:text-black transition-colors">CA Invention Convention</a></li>
+              <li><span className="text-gray-400">CA Invention Convention (Coming Soon)</span></li>
               <li><a target='_blank' href="https://www.goldenstateponds.com/" className="text-gray-600 hover:text-black transition-colors">Golden State Ponds</a></li>
               <li><a target='_blank' href="https://chalkwild.com/" className="text-gray-600 hover:text-black transition-colors">ChalkWild</a></li>
               <li><a target='_blank' href="https://www.allpeoplespc.org/" className="text-gray-600 hover:text-black transition-colors">All People&apos;s Presbyterian</a></li>
@@ -100,7 +100,7 @@ export function Footer() {
           © 2025 Visions to Visuals. All Rights Reserved.
         </p>
 
-        <p className="text-white text-sm">
+        <p className="text-gray-500 text-sm">
             We&apos;re not just another web development company - we&apos;re your partner in digital success.
         </p>
       </div>
