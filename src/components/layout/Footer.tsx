@@ -37,7 +37,7 @@ export function Footer() {
             />
             </Link>
             <p className="text-sm text-gray-500 mt-auto hidden md:block">
-              © 2025 Visions to Visuals. All Rights Reserved.
+              © 2026 Visions to Visuals. All Rights Reserved.
             </p>
           </div>
 
@@ -97,7 +97,7 @@ export function Footer() {
 
         {/* Mobile copyright notice */}
         <p className="text-sm text-gray-500 pt-8 md:hidden">
-          © 2025 Visions to Visuals. All Rights Reserved.
+          © 2026 Visions to Visuals. All Rights Reserved.
         </p>
 
         <p className="text-gray-500 text-sm">
