@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@calcom/embed-react": "^1.5.2",
-    "next": "15.1.5",
+    "next": "15.5.19",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
